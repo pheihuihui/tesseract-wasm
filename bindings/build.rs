@@ -50,7 +50,7 @@ fn main() {
         .open(&path)
         .unwrap();
     file1
-        .write("use super::bindings_leptonica::{_IO_FILE, Pix, Pixa, Boxa};\n\n".as_bytes())
+        .write("use crate::generated::bindings_leptonica::{Boxa, Pix, Pixa, _IO_FILE};\n\n".as_bytes())
         .unwrap();
     let mut file2 = OpenOptions::new().append(true).open(&path).unwrap();
     file2.write(capi_cont.as_bytes()).unwrap();

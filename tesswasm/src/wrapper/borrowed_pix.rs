@@ -1,5 +1,5 @@
-use std::marker::PhantomData;
 use crate::generated::bindings_leptonica;
+use std::marker::PhantomData;
 
 #[derive(Debug, PartialEq)]
 pub struct BorrowedPix<'a> {

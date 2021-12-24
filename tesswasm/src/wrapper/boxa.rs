@@ -1,6 +1,5 @@
-use crate::wrapper::borrowed_box;
 use crate::generated::bindings_leptonica;
-use thiserror;
+use crate::wrapper::borrowed_box;
 
 use bindings_leptonica::{boxaCreate, boxaDestroy, l_int32};
 
