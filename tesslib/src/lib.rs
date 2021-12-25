@@ -1,5 +1,5 @@
-mod generated;
-mod wrapper;
+pub mod generated;
+pub mod wrapper;
 
 use thiserror::Error;
 

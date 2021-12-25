@@ -1,4 +1,5 @@
 use crate::generated::bindings_tess_capi;
+use crate::wrapper::borrowed_pix;
 use crate::wrapper::boxa::Boxa;
 use crate::wrapper::pix::Pix;
 use crate::wrapper::text::Text;
@@ -19,8 +20,6 @@ use std::os::raw::c_int;
 use std::ptr;
 use std::slice;
 use thiserror::Error;
-
-use crate::wrapper::borrowed_pix;
 
 #[derive(Debug)]
 pub struct TessBaseApi(*mut bindings_tess_capi::TessBaseAPI);

@@ -1,3 +1,8 @@
+use tesslib::ocr;
+
 fn main() {
-    println!("Hello, world!");
+    let res = ocr("../pic.png", "eng");
+    if let Ok(text) = res {
+        println!("{}", text);
+    }
 }

@@ -81,11 +81,3 @@ fn read_test() {
     let lpix: &bindings_leptonica::Pix = pix.as_ref();
     assert_eq!(lpix.w, 200);
 }
-
-#[test]
-fn read_memory_test() -> Result<(), Box<dyn std::error::Error>> {
-    let pix = Pix::read_mem(include_bytes!("../../threat_captcha.png"))?;
-    let lpix: &bindings_leptonica::Pix = pix.as_ref();
-    assert_eq!(lpix.h, 23);
-    Ok(())
-}
