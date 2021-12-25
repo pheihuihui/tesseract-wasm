@@ -35,7 +35,7 @@ fn main() {
         .generate()
         .expect("Unable to generate bindings for tess types");
 
-    let out_path = PathBuf::from("../tesswasm/src/generated");
+    let out_path = PathBuf::from("../tesslib/src/generated");
 
     bindings_lept
         .write_to_file(out_path.join("bindings_leptonica.rs"))

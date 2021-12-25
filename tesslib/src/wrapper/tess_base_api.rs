@@ -1,6 +1,4 @@
 use crate::generated::bindings_tess_capi;
-use thiserror;
-
 use crate::wrapper::boxa::Boxa;
 use crate::wrapper::pix::Pix;
 use crate::wrapper::text::Text;
@@ -13,6 +11,7 @@ use bindings_tess_capi::{
     TessBaseAPISetRectangle, TessBaseAPISetSourceResolution, TessBaseAPISetVariable,
     TessDeleteIntArray, TessOcrEngineMode, TessPageIteratorLevel,
 };
+
 use std::convert::TryInto;
 use std::ffi::CStr;
 use std::ops::{Deref, DerefMut};
