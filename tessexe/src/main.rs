@@ -1,8 +1,11 @@
+use std::env;
 use tesslib::ocr;
 
 fn main() {
-    let res = ocr("../pic.png", "eng");
-    if let Ok(text) = res {
-        println!("{}", text);
+    if let Some(path) = env::args().nth(1) {
+        let res = ocr(&path, "eng");
+        if let Ok(text) = res {
+            println!("{}", text);
+        }
     }
 }
