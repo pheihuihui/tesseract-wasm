@@ -178,9 +178,6 @@ impl Tesseract {
         self.0.mean_text_conf()
     }
 
-    /// Get the text encoded as HTML with bounding box tags
-    ///
-    /// See [img.html](../img.html) for an example.
     pub fn get_hocr_text(
         &mut self,
         page: c_int,
