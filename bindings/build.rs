@@ -15,10 +15,9 @@ fn main() {
 }
 
 fn bind_lept(out_path: &PathBuf) {
-    let builder_lept = bindgen::Builder::default()
-        .clang_arg("-I/mnt/c/Users/optim/Documents/GitHub/tesseract-wasm/build/usr/include/leptonica")
-        .header("allheaders.h");
-    let bindings_lept = builder_lept
+    let bindings_lept = bindgen::Builder::default()
+        .clang_arg("-I../build/usr/include")
+        .header("leptonica/allheaders.h")
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .generate()
         .expect("Unable to generate bindings for lept");
