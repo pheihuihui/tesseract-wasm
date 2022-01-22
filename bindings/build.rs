@@ -8,16 +8,16 @@ fn main() {
     println!("cargo:rerun-if-changed=build.rs");
     println!("cargo:rerun-if-changed=Cargo.lock");
 
-    let out_path = PathBuf::from("../tesslib/src/generated");
+    let out_path = PathBuf::from("../tesslib/src/sys");
     bind_lept(&out_path);
-    bind_tess_capi(&out_path);
+    // bind_tess_capi(&out_path);
     // bind_tess_types(&out_path);
 }
 
 fn bind_lept(out_path: &PathBuf) {
     let builder_lept = bindgen::Builder::default()
-        .clang_arg("-I../sys-build/usr/include")
-        .header("headers/wrapper_leptonica.h");
+        .clang_arg("-I/mnt/c/Users/optim/Documents/GitHub/tesseract-wasm/build/usr/include/leptonica")
+        .header("allheaders.h");
     let bindings_lept = builder_lept
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .generate()
@@ -36,6 +36,7 @@ fn bind_lept(out_path: &PathBuf) {
     file.write(lept_content.as_bytes()).unwrap();
 }
 
+#[allow(unused)]
 fn bind_tess_capi(out_path: &PathBuf) {
     let builder_tess_capi = bindgen::Builder::default()
         .clang_arg("-I../sys-build/usr/include")

@@ -20,3 +20,9 @@
 	path = sys/tesseract
 	url = https://github.com/pheihuihui/tesseract
 	
+[submodule "sys/openlibm"]
+	path = sys/openlibm
+	url = https://github.com/pheihuihui/openlibm
+[submodule "sys/libpng"]
+	path = sys/libpng
+	url = https://github.com/pheihuihui/libpng
