@@ -1,6 +1,12 @@
-[submodule "sys/leptonica"]
-	path = sys/leptonica
-	url = https://github.com/DanBloomberg/leptonica.git
-[submodule "sys/tesseract"]
-	path = sys/tesseract
-	url = https://github.com/tesseract-ocr/tesseract.git
+[submodule "sys/zlib"]
+	path = sys/zlib
+	url = https://github.com/pheihuihui/zlib
+[submodule "sys/openjpeg"]
+	path = sys/openjpeg
+	url = https://github.com/pheihuihui/openjpeg
+[submodule "sys/libwebp"]
+	path = sys/libwebp
+	url = https://github.com/pheihuihui/libwebp
+[submodule "sys/libjpeg"]
+	path = sys/libjpeg
+	url = https://github.com/pheihuihui/libjpeg

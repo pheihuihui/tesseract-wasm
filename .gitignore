@@ -14,4 +14,4 @@ Cargo.lock
 **/*.rs.bk
 
 # sys
-sys-build/
+build/
