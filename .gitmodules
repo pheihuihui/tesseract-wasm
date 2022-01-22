@@ -10,3 +10,15 @@
 [submodule "sys/libjpeg"]
 	path = sys/libjpeg
 	url = https://github.com/pheihuihui/libjpeg
+[submodule "sys/libtiff"]
+	path = sys/libtiff
+	url = https://gitlab.com/pheihuihui/libtiff
+[submodule "sys/leptonica"]
+	path = sys/leptonica
+	url = https://github.com/pheihuihui/leptonica
+[submodule "sys/tesseract"]
+	path = sys/tesseract
+	url = https://github.com/pheihuihui/tesseract
+[submodule "sys/openlibm"]
+	path = sys/openlibm
+	url = https://github.com/pheihuihui/openlibm
